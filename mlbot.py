@@ -1,7 +1,7 @@
 ##########This project was created by using a guided tutorial that was created by Smitha Kolan on Youtube. ############
 #### Video used: https://www.youtube.com/watch?v=ugCiun8owMA&t=1713s ######
 
-##This project is a ML advice bot created in Python that connects to OpenAI's ChatGPT API 
+##This project is a ML advice bot created in Python that connects to OpenAI's ChatGPT API
 
 
 import Constants    #API Key
@@ -28,7 +28,7 @@ class MainWindow(QWidget):
 
     #Initializes UI
     def __init__(self):
-        super().__init__()
+        super().__init__()      #Lets you avoid referring to the base class explicitly
         self.init_ui()
 
     #Create widgets for UI- Button, text space, label, etc.
@@ -83,14 +83,14 @@ class MainWindow(QWidget):
        #Add Logo
        layout.addWidget(self.logo_label, alignment=Qt.AlignCenter)
 
-       #Add Input Field and SUbmit Button
+       #Actually adding Input Field and Submit Button to interface
        input_layout = QHBoxLayout()
        input_layout.addWidget(self.input_label)
        input_layout.addWidget(self.input_field)
        input_layout.addWidget(self.submit_button)
        layout.addLayout(input_layout)
 
-       #Add Answer Field
+       #Add Answer Field to interface
        layout.addWidget(self.answer_label)
        layout.addWidget(self.answer_field)
 
@@ -158,8 +158,6 @@ if __name__ == '__main__':
     window = MainWindow()
     window.show()
     sys.exit(app.exec_())
-
-
 
 
 
